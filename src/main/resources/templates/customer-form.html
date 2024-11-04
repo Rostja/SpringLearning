@@ -33,6 +33,13 @@
           class="error">from 0 to 10</span>
     <br><br>
 
+    Postal code: <input type="text" th:field="*{postalCode}" />
+    <!-- add error message if present -->
+    <span th:if="${#fields.hasErrors('postalCode')}"
+          th:errors="*{postalCode}"
+          class="error">5 digits/chars</span>
+    <br><br>
+
     <input type ="submit" value="Submit" />
 
 </form>
