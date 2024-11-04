@@ -40,6 +40,13 @@
           class="error">5 digits/chars</span>
     <br><br>
 
+    Course code: <input type="text" th:field="*{courseCode}" />
+    <!-- add error message if present -->
+    <span th:if="${#fields.hasErrors('courseCode')}"
+          th:errors="*{courseCode}"
+          class="error"></span>
+    <br><br>
+
     <input type ="submit" value="Submit" />
 
 </form>
